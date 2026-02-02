@@ -68,50 +68,92 @@ div{
     justify-content: space-evenly;
 }
 
-.info, .form, .create-account, .form-title{
-    padding-left: 30px;
-}
 
 .info{
     align-content: center;
 }
 
+.info, .form, .create-account, .form-title{
+    padding-left: 30px;
+}
+
 
 .form-title{
-    font-weight: bold;
     padding-top:20px;
 }
 
+.form-title-text{
+    font-weight: bold;
+    padding-top:40px;
+    font-size: 24;
+}
+
+label{
+    padding-top:4px;
+    padding-bottom: 4px;
+}
 
 .form{
     display:flex;
-    flex-direction: row;
-    font-size: x-small
+    flex-direction: column;
+    padding-top:20px;
+    padding-bottom:20px;
 }
 
 
+.info{
+    font-weight:600;
+}
+
 .info, .create-account{
-    background-color: lightgray;
+    background-color: rgb(250, 248, 248);
     height:100vh;
 }
 
-input{
-    width: 150px;
+
+input:focus{
+    outline-color: lightblue;
+    outline-offset: 1px;
+    outline-width: 1px;
 }
 
-.col-one, .col-two{
+.password:invalid, .confirm-password:invalid{
+    outline-width: 1px;
+    outline-offset: 1px;
+    outline-color: red;
+}
+
+
+
+input{
+    border: solid;
+    width: 150px;
+    border-width: 1px;
+    border-color: #E5E7EB;
+}
+
+input:invalid{
+    border-color: red;
+}
+
+.row-one, .row-two, .row-three{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 45%;
-    padding-top:30px;
-    padding-bottom:20px;
+    padding-right:10px;
+    padding-left: 0px;
+    margin:0px;
+    gap:90px;
 }
 
 .first-name, .last-name, .email, 
     .phone-number, .password, .confirm-password{
         display:flex;
         flex-direction: column;
-        padding: 5px;
+        padding-top:4px;
+        padding-bottom:4px;
+        font-size: 7px;
+        letter-spacing: 1px;
 }
 
 a{
@@ -120,7 +162,7 @@ a{
 }
 
 button{
-    background-color: olivedrab;
+    background-color: #596D48;
     color: white;
     font-weight:700;
     width:150px;
@@ -131,5 +173,6 @@ button{
 
 
 .create-account{
-    align-content: center;
+    align-content: top;
+    padding-top: 30px;
 }

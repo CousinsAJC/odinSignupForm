@@ -26,53 +26,51 @@
 
                 <p>You <em>know</em> you want to.</p>
             </div>
-            <div class="form-bucket">
+            <form class="form-bucket" id="myForm" method="post">
                 <div class="form-title">
-                    <label class="border">Let's do this!</label>
+                    <label class="border form-title-text">Let's do this!</label>
                 </div>
 
                 <div class="form">
-                    <div class="col-one">
+                    <div class="row-one">
                         <div class="first-name">
                             <label>FIRST NAME</label>
                             <input type="text" title="FIRST NAME">
                         </div>
-                        
-                        <div class="email">
-                            <label>EMAIL</label>
-                            <input type="email" title="EMAIL">
-                        </div>
-
-                        <div class="password">
-                            <label>PASSWORD</label>
-                            <input type="password" title="PASSWORD">
-                        </div>
-                    </div>
-                    
-                    <div class="col-two">
                         <div class="last-name">
                             <label>LAST NAME</label>
                             <input type="text" title="LAST NAME">
+                        </div>
+                    </div>
+                    <div class="row-two">
+                        <div class="email">
+                            <label>EMAIL</label>
+                            <input type="email" title="EMAIL">
                         </div>
                         <div class="phone-number">   
                             <label>PHONE NUMBER</label>
                             <input type="text" title="PHONE NUMBER"> 
                         </div>
-
-                        <div class="confirm-password">
+                    </div>    
+                    <div class="row-three">
+                        <div class="password">
+                        <label>PASSWORD</label>
+                        <input type="password" required title="PASSWORD" minlength="5" maxlength="10">
+                        </div>
+                            <div class="confirm-password">
                             <label>CONFIRM PASSWORD</label>
-                            <input type="password" title="CONFIRM PASSWORD">
+                            <input type="password" required title="CONFIRM PASSWORD" minlength="5" maxlength="10">
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
 
 
                 
                 
                 
             <div class="create-account border">
-                <button class="border">Create Account</button>
+                <button class="border" type="submit" action="/submit" form="myForm">Create Account</button>
 
                 <p>Already have an account?  <a href="login.html">Log in</a></p>
 
